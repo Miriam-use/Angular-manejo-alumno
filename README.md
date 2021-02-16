@@ -1,6 +1,8 @@
 # Angular-manejo-alumno
 Hoy, voy a compartir con ustedes un tutorial de MEAN Stack , en este tutorial de MEAN Stack voy a crear una aplicación CRUD Angular 11 usando Bootstrap 4. Usaré Node.js, Express.js, MongoDB para backend y Angular para el manejo de frontend.
 
+https://www.positronx.io/mean-stack-tutorial-angular-7-crud-bootstrap/
+
 Para el propósito de la demostración, crearé un sistema de gestión de alumnos utilizando la pila MEAN de Angular 11. Intentaré cubrir el tema esencial utilizado en el desarrollo de aplicaciones web CRUD.
 
 En este tutorial de MEAN stack, compartiré el proceso paso a paso para crear una aplicación Angular 11 CRUD (Crear, Leer, Actualizar, Eliminar) desde cero.
