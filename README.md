@@ -141,7 +141,7 @@ touch Employee.js
 
 En este archivo definiré el esquema para la colección de empleados. Mis tipos de datos son nombre, correo electrónico, designación y número de teléfono . Agregue el siguiente código en el backend > models > Employee.jsarchivo.
 
-<h1># 5 Cree API RESTful usando Express JS Routes</h1>
+<h1># 4 Cree API RESTful usando Express JS Routes</h1>
 
 Creemos las rutas en la aplicación Angular para acceder a los datos del empleado a través de las API RESTful. Usaré Mongoose.js en nuestro tutorial MEAN Stack para crear, leer, actualizar y eliminar datos de la base de datos MongoDB.
 
