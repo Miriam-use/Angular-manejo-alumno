@@ -1,0 +1,72 @@
+<div class="row justify-content-center">
+    <div class="col-md-4 register-employee">
+      <!-- form card register -->
+      <div class="card-body">
+        <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="inputName">Nombre</label>
+            <input class="form-control" type="text" formControlName="name">
+            <!-- error -->
+            <div class="invalid-feedback" *ngIf="submitted && myForm.name.errors?.required">
+                Se requiere el nombre.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="inputVerify3">Apellido</label>
+            <input class="form-control" type="text" formControlName="apellido">
+            <!-- error -->
+            <div class="invalid-feedback" *ngIf="submitted && myForm.phoneNumber.errors?.required">
+                Ingrese su apellidos.
+            </div>
+            <div class="invalid-feedback" *ngIf="submitted && myForm.phoneNumber.errors?.pattern">
+                Se requiere el apellido
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="inputEmail3">Email</label>
+            <input class="form-control" type="text" formControlName="email">
+            <!-- error -->
+            <div class="invalid-feedback" *ngIf="submitted && myForm.email.errors?.required">
+                Introduce tu correo electrónico.
+            </div>
+            <div class="invalid-feedback" *ngIf="submitted && myForm.email.errors?.pattern">
+                Ingrese un email valido.
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="inputPassword3">Curso</label>
+            <select class="custom-select form-control" (change)="updateProfile($event.target.value)"
+              formControlName="curso">
+              <option value="">Escoger...</option>
+              <option *ngFor="let employeeProfile of EmployeeProfile" value="{{employeeProfile}}">{{employeeProfile}}
+              </option>
+            </select>
+            <!-- error -->
+            <div class="invalid-feedback" *ngIf="submitted && myForm.designation.errors?.required">
+                Elija curso.
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="inputVerify3">Telefono</label>
+            <input class="form-control" type="text" formControlName="phoneNumber">
+            <!-- error -->
+            <div class="invalid-feedback" *ngIf="submitted && myForm.phoneNumber.errors?.required">
+                Ingrese su número telefónico.
+            </div>
+            <div class="invalid-feedback" *ngIf="submitted && myForm.phoneNumber.errors?.pattern">
+                Ingrese solo números
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <button class="btn btn-success btn-lg btn-block" type="submit">Registrarse</button>
+          </div>
+        </form>
+  
+      </div>
+    </div><!-- form card register -->
+  </div>
