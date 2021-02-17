@@ -1,33 +1,37 @@
+// app.module.ts
+
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { EmployeeCreateComponent } from './components/employee-create/employee-create.component';
-import { EmployeeEditComponent } from './components/employee-edit/employee-edit.component';
-import { EmployeeListComponent } from './components/employee-list/employee-list.component';
+import { AddBookComponent } from './components/add-book/add-book.component';
+import { BookDetailComponent } from './components/book-detail/book-detail.component';
+import { BooksListComponent } from './components/books-list/books-list.component';
 
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
-import { ApiService } from './service/api.service';
-
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmployeeCreateComponent,
-    EmployeeEditComponent,
-    EmployeeListComponent
+    AddBookComponent,
+    BookDetailComponent,
+    BooksListComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule,
-    HttpClientModule
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
-  providers: [ApiService],
-  bootstrap: [AppComponent]
+  providers: [],
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
+
 export class AppModule { }

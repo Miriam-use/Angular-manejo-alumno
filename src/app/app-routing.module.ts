@@ -1,19 +1,22 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { EmployeeCreateComponent } from './components/employee-create/employee-create.component';
-import { EmployeeListComponent } from './components/employee-list/employee-list.component';
-import { EmployeeEditComponent } from './components/employee-edit/employee-edit.component';
+import { BooksListComponent } from './components/books-list/books-list.component';
+import { AddBookComponent } from './components/add-book/add-book.component';
+import { BookDetailComponent } from './components/book-detail/book-detail.component';
+import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'create-employee' },
-  { path: 'create-employee', component: EmployeeCreateComponent },
-  { path: 'edit-employee/:id', component: EmployeeEditComponent },
-  { path: 'employees-list', component: EmployeeListComponent }  
+  { path: '', pathMatch: 'full', redirectTo: 'add-book' },
+  { path: 'books-list', component: BooksListComponent },
+  { path: 'add-book', component: AddBookComponent },
+  { path: 'edit-book/:id', component: BookDetailComponent },
+  { path: 'login', component: LoginComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }
