@@ -189,11 +189,3 @@ Puede acceder a su ruta API en la siguiente URL, aquí puede verificar sus datos
 Verifique su interfaz angular en - http://localhost:4200
 
 Puede verificar su URL de API en - http://localhost:4000/api
-
-<h1>Capturas<h1>
-
-<img src="/capturas/login.png" />
-
-<img src="/capturas/add.png" />
-
-<img src="/capturas/list.png" />
