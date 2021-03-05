@@ -1,37 +1,38 @@
-// app.module.ts
-
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-
-import { AddBookComponent } from './components/add-book/add-book.component';
-import { BookDetailComponent } from './components/book-detail/book-detail.component';
-import { BooksListComponent } from './components/books-list/books-list.component';
-
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
+import { ROUTING } from './app.routing';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { LoginComponent } from './components/login/login.component';
+
+import { RootComponent } from './root/root.component';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { AlumnoComponent } from './alumno/alumno.component';
+import { AddalumnoComponent } from './addalumno/addalumno.component';
+import { ReactiveFormsModule } from "@angular/forms";
+
+import {NgxPaginationModule} from 'ngx-pagination';  
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    AddBookComponent,
-    BookDetailComponent,
-    BooksListComponent,
-    LoginComponent
+  	RootComponent,
+    LoginComponent,
+    HomeComponent,
+    AlumnoComponent,
+    AddalumnoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    ROUTING,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    NgxPaginationModule,
+    Ng2SearchPipeModule,
+    ReactiveFormsModule,
+
   ],
   providers: [],
-  bootstrap: [AppComponent],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+  bootstrap: [RootComponent]
 })
-
 export class AppModule { }

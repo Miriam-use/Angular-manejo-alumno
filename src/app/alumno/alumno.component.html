@@ -1,0 +1,49 @@
+<div class="container" style="margin-bottom:20px;padding-top:20px;">  
+  <div class="row">  
+    <div class="col-sm-12 btn btn-success">  
+      Informacion Alumno  
+    </div>  
+  </div>  
+  <div class="col-sm-12" style="margin-bottom:20px;padding-top:20px;">  
+    <div class="row">  
+      <div class="col-sm-6">  
+        <button type="button" class="btn btn-primary" data-toggle="modal" routerLink="/addalumno">  
+          Nuevo Alumno  
+        </button>  
+      </div>  
+      <div class="col-sm-6">  
+        <input class="form-control" type="text" name="search" [(ngModel)]="filter" placeholder="Search">  
+      </div>  
+    </div>  
+  </div>  
+</div>  
+<div class="container" style="padding-top:20px;">  
+  <table class="table table-striped">  
+    <thead class="thead-dark">  
+      <th>Nombre</th>  
+      <th>Apellido</th>  
+      <th>Curso</th>  
+      <th>Email</th>  
+      <th>Telefono</th>  
+      <th>Action</th>  
+    </thead>  
+    <tbody>  
+      <tr *ngFor="let e of emp | async|filter:filter| paginate: { itemsPerPage: 5, currentPage: p } ; let i=index">  
+        <td>{{e.name}}</td>  
+        <td>{{e.apellido}}</td>  
+        <td>{{e.curso}}</td>  
+        <td>{{e.email}}</td>  
+        <td>{{e.telefono}}</td>  
+        <td>  
+          <div class="btn-group">  
+            <button type="button" class="btn btn-primary mr-1" (click)="EmployeeEdit(e.id)">Edit</button>  
+            <button type="button" class="btn btn-danger mr-1" (click)="Deleteemployee(e.id)">Delete</button>  
+          </div>  
+        </td>  
+      </tr>  
+    </tbody>  
+  </table>  
+  <ul class="pagination">  
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>  
+  </ul>  
+</div>
